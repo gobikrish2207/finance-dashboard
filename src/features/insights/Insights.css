@@ -1,0 +1,150 @@
+/* Insights Page */
+.insights-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 40px;
+}
+
+.insights-header-pro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mini-metric {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.insights-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  align-items: start;
+}
+
+.insights-row-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.insight-card-pro {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insight-pro-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.insight-pro-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.bg-emerald-pro { background: linear-gradient(135deg, #10B981, #059669); }
+.bg-violet-pro  { background: linear-gradient(135deg, #8B5CF6, #6366F1); }
+
+.insight-pro-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pro-progress-container {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.pro-progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1s var(--ease-out);
+}
+
+.pro-progress-fill.bg-emerald {
+  background: linear-gradient(90deg, var(--accent-emerald), #34d399);
+}
+
+.insight-chart-card {
+  padding: 24px;
+}
+
+/* Strategic Feed */
+.tips-list-pro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tip-card-pro {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tip-header-pro {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.comparison-insights {
+  display: flex;
+  gap: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.comp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (max-width: 1024px) {
+  .insights-main-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .insights-header-pro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .mini-metric {
+    text-align: left;
+  }
+
+  .insights-row-group { grid-template-columns: 1fr; }
+  
+  .insight-chart-card {
+    padding: 16px;
+  }
+
+  .comparison-insights {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

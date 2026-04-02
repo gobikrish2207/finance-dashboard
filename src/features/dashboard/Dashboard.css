@@ -1,0 +1,175 @@
+/* Dashboard Page Layout */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 40px;
+}
+
+.dashboard-header-pro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-pro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dashboard-v2-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.dashboard-v2-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dashboard-v2-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dashboard-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+.section-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Risk monitoring mini card */
+.pro-insights-mini {
+  padding: 20px;
+}
+
+.insight-item {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.15s;
+  margin-bottom: 10px;
+}
+
+.insight-item:last-child {
+  margin-bottom: 0;
+}
+
+.insight-item:hover {
+  border-color: var(--border-default);
+  background: var(--bg-hover);
+}
+
+.text-success { color: var(--accent-emerald); }
+.text-accent  { color: var(--accent-indigo); }
+.text-error   { color: var(--accent-rose); }
+.font-bold    { font-weight: 700; }
+
+/* ─── Mobile Actions Panel ─── */
+.mobile-actions-panel {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .mobile-actions-panel {
+    display: flex;
+  }
+
+  .dashboard-header-pro {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between;
+  }
+}
+
+.actions-grid-pro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.action-tile-pro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-default);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: 0.825rem;
+  font-weight: 700;
+  transition: all 0.2s var(--ease-out);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.action-tile-pro:active {
+  transform: scale(0.95);
+  background: var(--bg-hover);
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.action-tile-pro.primary {
+  flex-direction: row;
+  height: 54px;
+  background: var(--accent-indigo);
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+}
+
+.action-tile-pro.primary:active {
+  background: #5254CC;
+}
+
+.tile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-tile-pro.secondary {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: var(--border-subtle);
+}
+
+.secondary .tile-icon {
+  color: var(--accent-indigo);
+  opacity: 0.9;
+}
+
+.action-tile-pro.syncing .tile-icon {
+  color: var(--accent-emerald);
+  animation: spin 1.5s linear infinite;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+}

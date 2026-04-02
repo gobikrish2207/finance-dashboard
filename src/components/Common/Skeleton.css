@@ -1,0 +1,21 @@
+.skeleton-base {
+  background: var(--bg-elevated);
+  background-image: linear-gradient(
+    90deg,
+    var(--bg-elevated) 0px,
+    var(--bg-hover) 40px,
+    var(--bg-elevated) 80px
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s infinite linear;
+  display: block;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
